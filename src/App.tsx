@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Header } from "./components/header";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./rotas/home";
 import { Sobre } from "./rotas/sobre";
 import { Projeto } from "./rotas/projeto";
@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {/* <HashRouter> */}
       <Routes>
         <Route path="/react-port" element={<Home />} />
         <Route path="/react-port/sobre" element={<Sobre />} />
@@ -19,6 +20,7 @@ function App() {
         <Route path="/react-port/contato" element={<Contato />} />
         <Route path="*" element={<Home />} /> 
       </Routes>
+      {/* </HashRouter> */}
       <footer>Carlos R.</footer>
     </div>
   );
